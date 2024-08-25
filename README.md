@@ -43,3 +43,8 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+### Tailwind watch command
+```sh
+npx tailwindcss -i ./src/style/input.css -o ./src/style/output.css --watch
+```
