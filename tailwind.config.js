@@ -1,8 +1,35 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   important: true,
   content: ["./src/**/*.{html,js,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'white': "#fff",
+        'black': '#000',
+        'blue-dark': '#005da8',
+        'blue-light': '#2ebcfe',
+        'blue-darker': '#0e0e4d',
+        'orange': '#ef3c39',
+      },
+      fontFamily: {
+        default: ['Open Sans', 'sans-serif'],
+      },
+      content: {
+        'empty': '""'
+      },
+      skew: {
+        ...defaultTheme.skew,
+        '20': '20deg'
+      },
+      spacing: {
+        ...defaultTheme.spacing,
+        '140': '35rem',
+        '52': '13rem'
+      },
+
+    },
   },
   plugins: [],
 }
