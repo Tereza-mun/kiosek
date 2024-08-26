@@ -12,12 +12,14 @@ module.exports = {
         'blue-light': '#2ebcfe',
         'blue-darker': '#0e0e4d',
         'orange': '#ef3c39',
+        'red': '#ef4444',
       },
       fontFamily: {
         default: ['Open Sans', 'sans-serif'],
       },
       content: {
-        'empty': '""'
+        'empty': '""',
+        'triangle-red': 'url(\'@/assets/images/icons/triangle-red.svg\')'
       },
       skew: {
         ...defaultTheme.skew,
@@ -26,6 +28,7 @@ module.exports = {
       spacing: {
         ...defaultTheme.spacing,
         '140': '35rem',
+        '160': '40rem',
         '52': '13rem'
       },
 

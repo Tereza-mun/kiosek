@@ -5,7 +5,7 @@ import KiosekContainer from '@/components/other/KiosekContainer.vue'
 const options = [
   {
     buttonText: 'Mám schůzku',
-    buttonPath: 'meetingDetail',
+    buttonPath: 'meetingSearch',
     icon: 'meeting'
   },
   {
@@ -29,7 +29,7 @@ const options = [
 <template>
   <main>
     <kiosek-container>
-      <section class="flex overflow-hidden">
+      <div class="flex overflow-hidden">
         <div class="overflow-hidden relative -ml-24 -skew-x-20 max-w-140">
           <img
             src="~@/assets/images/layout/car-dealer.png"
@@ -62,7 +62,7 @@ const options = [
           </div>
         </div>
 
-      </section>
+      </div>
 
     </kiosek-container>
   </main>

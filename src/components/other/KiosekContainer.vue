@@ -9,9 +9,9 @@ defineProps({
 </script>
 
 <template>
-  <div
+  <section
     class="max-w-7xl block mx-auto"
     :class="backgroundClass">
     <slot />
-  </div>
+  </section>
 </template>
