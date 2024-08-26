@@ -2,12 +2,10 @@
 import KiosekContainer from '@/components/other/KiosekContainer.vue'
 import KiosekButton from '@/components/atoms/KiosekButton.vue'
 import { useRouter } from 'vue-router'
-import {ref, reactive} from 'vue'
+import { reactive } from 'vue'
 import { useVuelidate } from '@vuelidate/core'
 import * as validators from '@vuelidate/validators'
 import { useFormStore } from '@/stores/formStore';
-
-// const complete = ref<Boolean>(false)
 
 const router = useRouter()
 function goBack() {
@@ -27,20 +25,11 @@ const rules = {
 
 const v$ = useVuelidate(rules, state)
 
-const success = ref<Boolean>(false)
-
 const formStore = useFormStore()
 
 const onSubmit = async () => {
   const isFormCorrect = await v$.value.$validate()
   if (!isFormCorrect) return
-
-  const data = {
-    ...state,
-  }
-  delete data['error']
-
-  success.value = true
 
   if (state.phone === formStore.meeting.phone) {
     await router.push({ name: 'meetingDetail' })

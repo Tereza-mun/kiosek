@@ -40,9 +40,9 @@ const options = [
           <h1 class="text-3xl font-bold text-blue-dark skew-x-20 mb-8">Se kterou službou Vám dnes můžeme pomoci?</h1>
           <div
             v-for="(item, index) in options"
+            :key="index"
             class="skew-x-20 mb-3">
             <kiosek-button
-              :index="index"
               tag="router-link"
               :to="{ name: item.buttonPath }"
               primary

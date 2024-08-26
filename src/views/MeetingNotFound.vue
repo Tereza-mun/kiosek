@@ -2,7 +2,6 @@
 import KiosekContainer from '@/components/other/KiosekContainer.vue'
 import KiosekButton from '@/components/atoms/KiosekButton.vue'
 import { useRouter } from 'vue-router'
-import { useFormStore } from '@/stores/formStore'
 
 const router = useRouter()
 
