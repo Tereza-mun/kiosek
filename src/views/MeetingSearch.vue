@@ -51,8 +51,7 @@ const onSubmit = async () => {
 </script>
 
 <template>
-  <kiosek-container
-    :background-class="'bg-blue-dark'">
+  <kiosek-container linear>
     <div class="px-6 py-3">
       <kiosek-button
         primary
@@ -62,11 +61,11 @@ const onSubmit = async () => {
       >
         Zpět
       </kiosek-button>
-      <div class="flex justify-center">
+      <div class="flex justify-center min-h-128">
         <form
           id="form"
           name="form"
-          class="py-28 max-w-96"
+          class="py-28 max-w-140"
           autocomplete="on"
           @submit.prevent="onSubmit"
         >
@@ -99,12 +98,14 @@ const onSubmit = async () => {
             </div>
 
           </div>
-          <kiosek-button
-            type="submit"
-            secondary
-          >
-            Potvrdit
-          </kiosek-button>
+          <div class="flex justify-center">
+            <kiosek-button
+              type="submit"
+              secondary
+            >
+              Potvrdit
+            </kiosek-button>
+          </div>
         </form>
       </div>
     </div>

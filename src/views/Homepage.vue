@@ -33,7 +33,7 @@ const options = [
         <div class="overflow-hidden relative -ml-24 -skew-x-20 max-w-140">
           <img
             src="~@/assets/images/layout/car-dealer.png"
-            alt=""
+            alt="schůzka v autoprodejně"
             class="skew-x-20 origin-top-right">
         </div>
         <div class="pl-36 pr-20 py-8 -skew-x-20">
@@ -53,13 +53,15 @@ const options = [
           </div>
         </div>
         <div class="flex flex-col justify-end">
-          <div class="flex items-center pb-2">
-            <p class="text-xl text-blue-dark font-bold mr-2">EN</p>
-            <img
-              src="~@/assets/images/icons/en-flag.png"
-              alt=""
-              class="w-10 h-8">
-          </div>
+          <kiosek-button>
+            <div class="flex items-center pb-2">
+              <p class="text-xl text-blue-dark font-bold mr-2">EN</p>
+              <img
+                src="~@/assets/images/icons/en-flag.png"
+                alt="ikona anglická vlajka"
+                class="w-10 h-8">
+            </div>
+          </kiosek-button>
         </div>
 
       </div>
