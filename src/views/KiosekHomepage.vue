@@ -6,21 +6,25 @@ const options = [
   {
     buttonText: 'Mám schůzku',
     buttonPath: 'meetingSearch',
+    ariaLabel: 'klikněte zde pokud s námi máte domluvenou schůzku',
     icon: 'meeting'
   },
   {
     buttonText: 'Chci koupit vůz',
     buttonPath: 'home',
+    ariaLabel: 'klikněte zde pokud chcete koupit vůz',
     icon: 'buyCar'
   },
   {
     buttonText: 'Prodám svůj vůz',
     buttonPath: 'home',
+    ariaLabel: 'klikněte zde pokud prodáváte vůz',
     icon: 'sellCar'
   },
   {
     buttonText: 'Reklamace',
     buttonPath: 'home',
+    ariaLabel: 'klikněte zde pro vyřízení reklamace',
     icon: 'claim'
   },
 ]
@@ -36,8 +40,8 @@ const options = [
             alt="schůzka v autoprodejně"
             class="skew-x-20 origin-top-right">
         </div>
-        <div class="pl-36 pr-20 py-8 -skew-x-20">
-          <h1 class="text-3xl font-bold text-blue-dark skew-x-20 mb-8">Se kterou službou Vám dnes můžeme pomoci?</h1>
+        <div class="pl-52 pr-20 py-16 -skew-x-20">
+          <h1 class="text-3xl font-bold text-blue-dark skew-x-20 mb-8">Jak Vám dnes můžeme pomoci?</h1>
           <div
             v-for="(item, index) in options"
             :key="index"
@@ -45,6 +49,7 @@ const options = [
             <kiosek-button
               tag="router-link"
               :to="{ name: item.buttonPath }"
+              :aria="item.ariaLabel"
               primary
               navigation
               :icon="item.icon">
@@ -52,20 +57,7 @@ const options = [
             </kiosek-button>
           </div>
         </div>
-        <div class="flex flex-col justify-end">
-          <kiosek-button>
-            <div class="flex items-center pb-2">
-              <p class="text-xl text-blue-dark font-bold mr-2">EN</p>
-              <img
-                src="~@/assets/images/icons/en-flag.png"
-                alt="ikona anglická vlajka"
-                class="w-10 h-8">
-            </div>
-          </kiosek-button>
-        </div>
-
       </div>
-
     </kiosek-container>
   </main>
 </template>
