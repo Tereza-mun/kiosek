@@ -3,10 +3,12 @@ defineProps({
   iconImage: {
     type: String,
     default: null,
+    required: false,
   },
   iconClass: {
     type: String,
     default: null,
+    required: false,
   }
 })
 </script>

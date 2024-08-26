@@ -5,6 +5,10 @@ import { useRouter } from 'vue-router'
 import { useFormStore } from '@/stores/formStore'
 import { storeToRefs } from 'pinia';
 
+import BackIconImage from '@/assets/images/icons/arrow-back.svg'
+
+const backIconImage = BackIconImage;
+
 const router = useRouter()
 
 function goBack() {
@@ -27,7 +31,8 @@ console.log(meetings)
         primary
         back
         aria="klikněte pro přesun o krok zpět"
-        icon="back"
+        :icon-class="'icon--arrow'"
+        :icon-image="backIconImage"
         @click="goBack"
       >
         Zpět

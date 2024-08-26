@@ -3,6 +3,10 @@ import KiosekContainer from '@/components/other/KiosekContainer.vue'
 import KiosekButton from '@/components/atoms/KiosekButton.vue'
 import { useRouter } from 'vue-router'
 
+import BackIconImage from '@/assets/images/icons/arrow-back.svg'
+
+const backIconImage = BackIconImage;
+
 const router = useRouter()
 
 function goBack() {
@@ -17,7 +21,8 @@ function goBack() {
         primary
         back
         aria="klikněte pro přesun o krok zpět"
-        icon="back"
+        :icon-class="'icon--arrow'"
+        :icon-image="backIconImage"
         @click="goBack"
       >
         Zpět

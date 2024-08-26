@@ -6,6 +6,9 @@ import { reactive } from 'vue'
 import { useVuelidate } from '@vuelidate/core'
 import * as validators from '@vuelidate/validators'
 import { useFormStore } from '@/stores/formStore';
+import BackIconImage from '@/assets/images/icons/arrow-back.svg'
+
+const backIconImage = BackIconImage;
 
 const router = useRouter()
 function goBack() {
@@ -34,7 +37,6 @@ const onSubmit = async () => {
   const data = {
     ...state,
   }
-  delete data['error']
 
   await formStore.fetchMeetings(data)
 
@@ -53,7 +55,8 @@ const onSubmit = async () => {
         primary
         back
         aria="klikněte pro přesun o krok zpět"
-        icon="back"
+        :icon-class="'icon--arrow'"
+        :icon-image="backIconImage"
         @click="goBack"
       >
         Zpět
