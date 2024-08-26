@@ -63,6 +63,7 @@ const onSubmit = async () => {
         <form
           id="form"
           name="form"
+          aria-label="zadejte své telefonní číslo"
           class="py-28 max-w-140"
           autocomplete="on"
           @submit.prevent="onSubmit"
