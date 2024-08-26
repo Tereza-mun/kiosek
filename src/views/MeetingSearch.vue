@@ -31,7 +31,14 @@ const onSubmit = async () => {
   const isFormCorrect = await v$.value.$validate()
   if (!isFormCorrect) return
 
-  if (state.phone === formStore.meeting.phone) {
+  const data = {
+    ...state,
+  }
+  delete data['error']
+
+  await formStore.fetchMeetings(data)
+
+  if (state.phone === formStore.dummyMeeting.phone) {
     await router.push({ name: 'meetingDetail' })
   } else {
     await router.push({ name: 'meetingNotFound'})
@@ -45,11 +52,13 @@ const onSubmit = async () => {
       <kiosek-button
         primary
         back
-        :icon="'back'"
+        aria="klikněte pro přesun o krok zpět"
+        icon="back"
         @click="goBack"
       >
         Zpět
       </kiosek-button>
+    </div>
       <div class="flex justify-center min-h-128">
         <form
           id="form"
@@ -91,12 +100,12 @@ const onSubmit = async () => {
             <kiosek-button
               type="submit"
               secondary
+              aria="klikněte pro odeslání formuláře"
             >
               Potvrdit
             </kiosek-button>
           </div>
         </form>
       </div>
-    </div>
   </kiosek-container>
 </template>

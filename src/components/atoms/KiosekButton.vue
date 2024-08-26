@@ -54,6 +54,10 @@ defineProps({
       return ['button', 'router-link'].includes(value)
     }
   },
+  aria: {
+    type: String,
+    required: true
+  },
   disabled: {
     type: Boolean,
     required: false,
@@ -85,6 +89,7 @@ defineProps({
   <component
     :is="tag"
     class="button"
+    :aria-label="aria"
     :disabled="disabled"
     :class="{
       'button--primary': primary,
