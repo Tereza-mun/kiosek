@@ -18,7 +18,7 @@ const options = [
   {
     buttonText: 'Prodám svůj vůz',
     buttonPath: 'home',
-    ariaLabel: 'klikněte zde pokud prodáváte vůz',
+    ariaLabel: 'klikněte zde pokud prodáváte váš vůz',
     icon: 'sellCar'
   },
   {
