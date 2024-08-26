@@ -1,6 +1,6 @@
 # kiosek
 
-This template should help get you started developing with Vue 3 in Vite.
+Pro úspěšné zadání tel.čísla, zadejte 123456789.
 
 ## Recommended IDE Setup
 
