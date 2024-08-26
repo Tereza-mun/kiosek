@@ -10,10 +10,20 @@ const router = createRouter({
       component: Homepage
     },
     {
+      path: '/zadani-cisla',
+      name: 'meetingSearch',
+      component: () => import('../views/MeetingSearch.vue')
+    },
+    {
       path: '/detail-schuzky',
       name: 'meetingDetail',
       component: () => import('../views/MeetingDetail.vue')
-    }
+    },
+    {
+      path: '/schuzka-nenalezena',
+      name: 'meetingNotFound',
+      component: () => import('../views/MeetingNotFound.vue')
+    },
   ]
 })
 
