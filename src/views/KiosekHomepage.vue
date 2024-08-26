@@ -46,9 +46,9 @@ const options = [
       <div class="flex overflow-hidden">
         <div class="overflow-hidden relative -ml-24 -skew-x-20 max-w-140">
           <img
-            src="~@/assets/images/layout/car-dealer.png"
+            src="~@/assets/images/layout/car-dealership.png"
             alt="schůzka v autoprodejně"
-            class="skew-x-20 origin-top-right h-full object-cover">
+            class="skew-x-20 w-full origin-top-right h-full object-cover">
         </div>
         <div class="pl-52 pr-20 py-16 -skew-x-20">
           <h1 class="text-3xl font-bold text-blue-dark skew-x-20 mb-8">Jak Vám dnes můžeme pomoci?</h1>
