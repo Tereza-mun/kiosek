@@ -16,14 +16,14 @@ export const useFormStore = defineStore({
     meetings: [] as MeetingsList[]
   }),
   actions: {
-    async fetchMeetings(data: any) {
+    async fetchMeetings(data?: any) {
       const submittedNumber = data
 
       try {
         const { data }: any = await axios.get('https://jsonplaceholder.typicode.com/todos');
-        this.meetings = data.filter((response) => response.phone === submittedNumber)
+        this.meetings = data.filter((response: any) => response.phone === submittedNumber)
 
-      } catch (err) {
+      } catch (err: any) {
         this.meetings = [];
         console.error('Error getting data:', err)
         this.error = err.response.data.error
