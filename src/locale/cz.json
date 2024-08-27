@@ -35,5 +35,7 @@
     "errors": {
         "required": "Bez telefonního čísla se neobejdeme",
         "badFormat": "Telefonní číslo je ve&nbsp;špatném formátu"
-    }
+    },
+    "pageNotFound": "Bohužel se něco pokazilo a&nbsp;stránka nebyla nalezena.",
+    "backToMainPage": "Zpět na úvodní stránku"
 }
