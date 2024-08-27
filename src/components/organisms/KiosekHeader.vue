@@ -29,9 +29,9 @@ import CzechFlag from '@/assets/images/icons/flag-cz.svg'
           aria="klikněte pro změnu jazyka na angličtinu"
           @click="$i18n.locale === 'cz' ? $i18n.locale = 'en' : $i18n.locale = 'cz'">
           <div class="flex items-center pb-2 pr-1">
-            <p class="text-xl text-blue-dark font-bold mr-2">{{ $i18n.locale }}</p>
+            <p class="text-xl text-blue-dark font-bold mr-2">{{ $i18n.locale === 'cz' ? 'en' : 'cz' }}</p>
             <img
-              :src="$i18n.locale === 'cz' ? CzechFlag : EnglishFlag "
+              :src="$i18n.locale === 'cz' ? EnglishFlag: CzechFlag "
               alt="ikona anglická vlajka"
               class="w-10 h-8"
             />
