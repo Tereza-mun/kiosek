@@ -64,17 +64,17 @@ const onSubmit = async () => {
         {{$t('backButtonText')}}
       </kiosek-button>
     </div>
-      <div class="flex justify-center min-h-128">
+      <div class="flex justify-center min-h-101 md:min-h-128">
         <form
           id="form"
           name="form"
           :aria="$t('search.ariaForm')"
-          class="py-28 max-w-140"
+          class="flex flex-col justify-between px-6 md:px-0 py-20 md:py-36 max-w-140"
           autocomplete="on"
           @submit.prevent="onSubmit"
         >
           <div
-            class="block mx-auto my-4">
+            class="block mx-auto">
             <label
               class="text-3xl text-white font-bold"
               for="phone">
@@ -100,7 +100,6 @@ const onSubmit = async () => {
                 v-html="error.$message"
               />
             </div>
-
           </div>
           <div class="flex justify-center">
             <kiosek-button

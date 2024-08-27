@@ -44,20 +44,20 @@ const options = [
   <main>
     <kiosek-container>
       <div class="flex overflow-hidden">
-        <div class="overflow-hidden relative -ml-24 -skew-x-20 max-w-140">
+        <div class="overflow-hidden relative md:-ml-24 md:-skew-x-20 max-w-140">
           <img
             src="~@/assets/images/layout/car-dealership.png"
             alt="schůzka v autoprodejně"
-            class="skew-x-20 w-full origin-top-right h-full object-cover">
+            class="hidden md:block skew-x-20 w-full origin-top-right h-full object-cover">
         </div>
-        <div class="pl-52 pr-20 py-16 -skew-x-20">
+        <div class="px-10 md:pl-36 lg:pl-52 md:pr-20 py-16 md:-skew-x-20">
           <h1
-            class="text-3xl font-bold text-blue-dark skew-x-20 mb-8"
+            class="text-3xl font-bold text-blue-dark md:skew-x-20 mb-8"
             v-html="$t('homepage.headline')" />
           <div
             v-for="(item, index) in options"
             :key="index"
-            class="skew-x-20 mb-3">
+            class="md:skew-x-20 mb-3">
             <kiosek-button
               tag="router-link"
               :to="{ name: item.buttonPath }"
