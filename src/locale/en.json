@@ -12,7 +12,7 @@
         "ariaLabelClaim": "click here to open a claim"
     },
     "footer": {
-        "text": "In case of technical issue with the self service booth, please call: ",
+        "text": "In case of technical issues with the self service booth, please call: ",
         "phone": "+420 796 123 456."
     },
     "backButtonText": "Back",
