@@ -1,0 +1,40 @@
+{
+    "title": "Self service booth",
+    "homepage": {
+        "headline": "How can we help you today?",
+        "meeting": "I have an appointment",
+        "ariaLabelMeeting": "click here if you have an appointment arranged",
+        "buyCar": "I want to buy a car",
+        "ariaLabelBuyCar": "click here if you would like to buy a car",
+        "sellCar": "I am selling my car",
+        "ariaLabelSellCar": "click here if you are selling your car",
+        "claim": "Open a claim",
+        "ariaLabelClaim": "click here to open a claim"
+    },
+    "footer": {
+        "text": "In case of technical issue with the self service booth, please call: ",
+        "phone": "+420 796 123 456."
+    },
+    "backButtonText": "Back",
+    "backButtonAria": "click to return to previous site",
+    "search": {
+        "instructions": "Please fill in your phone number",
+        "ariaForm": "please fill in your phone number",
+        "submitButton": "Submit",
+        "submitAria": "click to submit the form"
+    },
+    "detail": {
+        "text": "Please find the details of your appointment below:",
+        "date": "Date",
+        "time": "Time",
+        "location": "Location",
+        "pickUp": "Your contact person will come pick you up shortly:",
+        "person": ""
+    },
+    "meetingNotFound": "Thank you for your visit. We unfortunately haven't found the details of your visit but one of our colleagues will assist you shortly.",
+    "errors": {
+        "required": "Phone number needs to be filled in",
+        "badFormat": "Phone number is in the wrong format"
+    }
+}
+

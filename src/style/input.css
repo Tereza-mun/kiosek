@@ -65,7 +65,7 @@
     .button--nav{
         @apply
         pr-6
-        w-52
+        w-64
     }
 
     .button--back{

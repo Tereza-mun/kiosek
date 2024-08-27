@@ -1,0 +1,39 @@
+{
+    "title": "Kiosek",
+    "homepage": {
+        "headline": "Jak Vám dnes můžeme pomoci?",
+        "meeting": "Mám schůzku",
+        "ariaLabelMeeting": "klikněte zde pokud s námi máte domluvenou schůzku",
+        "buyCar": "Chci koupit vůz",
+        "ariaLabelBuyCar": "klikněte zde pokud chcete koupit vůz",
+        "sellCar": "Prodám svůj vůz",
+        "ariaLabelSellCar": "klikněte zde pokud prodáváte váš vůz",
+        "claim": "Reklamace",
+        "ariaLabelClaim": "klikněte zde pro vyřízení reklamace"
+    },
+    "footer": {
+        "text": "V případě poruchy kiosku, prosím, volejte: ",
+        "phone": "+420 796 123 456."
+    },
+    "backButtonText": "Zpět",
+    "backButtonAria": "klikněte pro přesun o krok zpět",
+    "search": {
+        "instructions": "Zadejte, prosím, své telefonní číslo",
+        "ariaForm": "zadejte své telefonní číslo",
+        "submitButton": "Potvrdit",
+        "submitAria": "klikněte pro odeslání formuláře"
+    },
+    "detail": {
+        "text": "Děkujeme za&nbsp;Vaši návštěvu, níže naleznete detail Vaší plánované schůzky:",
+        "date": "Datum",
+        "time": "Čas",
+        "location": "Místnost",
+        "pickUp": "Brzy Vás vyzvedne Vaše kontaktní osoba:",
+        "person": ""
+    },
+    "meetingNotFound": "Děkujeme za&nbsp;Vaši návštěvu, bohužel se&nbsp;nám nepovedlo nalézt detaily Vaší schůzky, ale&nbsp;víme o&nbsp;Vás a&nbsp;brzy se Vám bude někdo z&nbsp;našich pracovníků věnovat.",
+    "errors": {
+        "required": "Bez telefonního čísla se neobejdeme",
+        "badFormat": "Telefonní číslo je ve&nbsp;špatném formátu"
+    }
+}

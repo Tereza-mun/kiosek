@@ -14,27 +14,27 @@ const claimIconImage = ClaimIconImage;
 
 const options = [
   {
-    buttonText: 'Mám schůzku',
+    buttonText: 'homepage.meeting',
     buttonPath: 'meetingSearch',
-    ariaLabel: 'klikněte zde pokud s námi máte domluvenou schůzku',
+    ariaLabel: 'homepage.ariaLabelMeeting',
     iconImage: meetingIconImage
   },
   {
-    buttonText: 'Chci koupit vůz',
+    buttonText: 'homepage.buyCar',
     buttonPath: 'home',
-    ariaLabel: 'klikněte zde pokud chcete koupit vůz',
+    ariaLabel: 'homepage.ariaLabelBuyCar',
     iconImage: buyCarIconImage
   },
   {
-    buttonText: 'Prodám svůj vůz',
+    buttonText: 'homepage.sellCar',
     buttonPath: 'home',
-    ariaLabel: 'klikněte zde pokud prodáváte váš vůz',
+    ariaLabel: 'homepage.ariaLabelSellCar',
     iconImage: sellCarIconImage
   },
   {
-    buttonText: 'Reklamace',
+    buttonText: 'homepage.claim',
     buttonPath: 'home',
-    ariaLabel: 'klikněte zde pro vyřízení reklamace',
+    ariaLabel: 'homepage.ariaLabelClaim',
     iconImage: claimIconImage
   },
 ]
@@ -51,7 +51,9 @@ const options = [
             class="skew-x-20 w-full origin-top-right h-full object-cover">
         </div>
         <div class="pl-52 pr-20 py-16 -skew-x-20">
-          <h1 class="text-3xl font-bold text-blue-dark skew-x-20 mb-8">Jak Vám dnes můžeme pomoci?</h1>
+          <h1
+            class="text-3xl font-bold text-blue-dark skew-x-20 mb-8"
+            v-html="$t('homepage.headline')" />
           <div
             v-for="(item, index) in options"
             :key="index"
@@ -59,12 +61,12 @@ const options = [
             <kiosek-button
               tag="router-link"
               :to="{ name: item.buttonPath }"
-              :aria="item.ariaLabel"
+              :aria="$t(item.ariaLabel)"
               primary
               navigation
               :icon-class="'icon--nav'"
               :icon-image="item.iconImage">
-              {{ item.buttonText }}
+              {{ $t(item.buttonText) }}
             </kiosek-button>
           </div>
         </div>

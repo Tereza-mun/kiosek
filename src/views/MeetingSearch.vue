@@ -6,10 +6,12 @@ import { reactive } from 'vue'
 import { useVuelidate } from '@vuelidate/core'
 import * as validators from '@vuelidate/validators'
 import { useFormStore } from '@/stores/formStore';
+import {useI18n} from 'vue-i18n';
 import BackIconImage from '@/assets/images/icons/arrow-back.svg'
 
 const backIconImage = BackIconImage;
 
+const i18n = useI18n();
 const router = useRouter()
 function goBack() {
   router.go(-1)
@@ -19,8 +21,8 @@ const state = reactive({
   phone: '',
 })
 
-const vRequired = validators.helpers.withMessage('Bez telefonního čísla se neobejdeme', validators.required)
-const vPhone = validators.helpers.withMessage('Telefonní číslo je ve&nbsp;špatném formátu', validators.helpers.regex(/^((\+ ?|00)[0-9]{1,3} ?)?[0-9 -]{9,14}(?:x.+)?$/))
+const vRequired = validators.helpers.withMessage(i18n.t('errors.required'), validators.required)
+const vPhone = validators.helpers.withMessage(i18n.t('errors.badFormat'), validators.helpers.regex(/^((\+ ?|00)[0-9]{1,3} ?)?[0-9 -]{9,14}(?:x.+)?$/))
 
 const rules = {
   phone: {vRequired, vPhone},
@@ -54,19 +56,19 @@ const onSubmit = async () => {
       <kiosek-button
         primary
         back
-        aria="klikněte pro přesun o krok zpět"
+        :aria="$t('backButtonAria')"
         :icon-class="'icon--arrow'"
         :icon-image="backIconImage"
         @click="goBack"
       >
-        Zpět
+        {{$t('backButtonText')}}
       </kiosek-button>
     </div>
       <div class="flex justify-center min-h-128">
         <form
           id="form"
           name="form"
-          aria-label="zadejte své telefonní číslo"
+          :aria="$t('search.ariaForm')"
           class="py-28 max-w-140"
           autocomplete="on"
           @submit.prevent="onSubmit"
@@ -76,7 +78,7 @@ const onSubmit = async () => {
             <label
               class="text-3xl text-white font-bold"
               for="phone">
-              Zadejte, prosím, své telefonní číslo
+              {{$t('search.instructions')}}
             </label>
 
             <input
@@ -104,9 +106,9 @@ const onSubmit = async () => {
             <kiosek-button
               type="submit"
               secondary
-              aria="klikněte pro odeslání formuláře"
+              :aria="$t('search.submitAria')"
             >
-              Potvrdit
+              {{$t('search.submitButton')}}
             </kiosek-button>
           </div>
         </form>
