@@ -11,22 +11,15 @@ import router from './router'
 
 const app = createApp(App)
 
-function loadLocaleMessages () {
-  const locales = [ { cz: cz}, { en: en}]
-  const messages = {};
-  locales.forEach(lang => {
-    const key = Object.keys(lang)
-    messages[key] = lang[key]
-  });
-  return messages;
-}
-
 const i18n = createI18n({
   legacy: false,
   locale: 'cz',
   availableLocales: ['cz', 'en'],
   fallbackLocale: 'cz',
-  messages: loadLocaleMessages()
+  messages: {
+    cz: cz,
+    en: en
+  }
 })
 
 app.use(createPinia())
