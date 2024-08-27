@@ -11,6 +11,8 @@
         "claim": "Open a claim",
         "ariaLabelClaim": "click here to open a claim"
     },
+    "homeButtonAria": "click to return to main page",
+    "languageSwitchAria": "click to switch language to czech",
     "footer": {
         "text": "In case of technical issues with the self service booth, please call: ",
         "phone": "+420 796 123 456."

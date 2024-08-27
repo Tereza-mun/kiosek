@@ -33,7 +33,7 @@ function goBack() {
             v-html="$t('pageNotFound')" />
           <kiosek-button
             tag="router-link"
-            :aria="$t('backButtonAria')"
+            :aria="$t('homeButtonAria')"
             secondary
             :to="{name: 'home'}">
             {{$t('backToMainPage')}}

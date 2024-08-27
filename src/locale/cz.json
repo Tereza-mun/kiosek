@@ -11,6 +11,8 @@
         "claim": "Reklamace",
         "ariaLabelClaim": "klikněte zde pro vyřízení reklamace"
     },
+    "homeButtonAria": "klikněte pro přesun na úvodní stranu",
+    "languageSwitchAria": "klikněte pro změnu jazyka na angličtinu",
     "footer": {
         "text": "V případě poruchy kiosku, prosím, volejte: ",
         "phone": "+420 796 123 456."
