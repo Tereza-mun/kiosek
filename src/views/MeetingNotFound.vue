@@ -28,9 +28,16 @@ function goBack() {
         {{$t('backButtonText')}}
       </kiosek-button>
       <div class="flex justify-center md:px-6 py-3 min-h-101 md:min-h-128">
-        <div class="py-24 md:py-28 max-w-160">
-          <h1 class="text-2xl md:text-3xl text-white font-bold md:mb-8"
+        <div class="py-16 md:py-28 max-w-160">
+          <h1 class="text-2xl md:text-3xl text-white font-bold mb-12"
             v-html="$t('meetingNotFound')" />
+          <kiosek-button
+            tag="router-link"
+            :aria="$t('backButtonAria')"
+            secondary
+            :to="{name: 'home'}">
+            {{$t('backToMainPage')}}
+          </kiosek-button>
         </div>
       </div>
     </div>
