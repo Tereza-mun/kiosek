@@ -1,13 +1,14 @@
-import './style/output.css'
+import App from './App.vue'
+import router from './router'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createI18n } from 'vue-i18n'
+import './style/output.css'
 import cz from './locale/cz.json'
 import en from './locale/en.json'
 
-import App from './App.vue'
-import router from './router'
+
 
 const app = createApp(App)
 
