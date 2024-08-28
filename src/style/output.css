@@ -660,6 +660,10 @@ video {
   position: relative !important;
 }
 
+.right-3 {
+  right: 0.75rem !important;
+}
+
 .z-20 {
   z-index: 20 !important;
 }
@@ -699,6 +703,14 @@ video {
 
 .mt-4 {
   margin-top: 1rem !important;
+}
+
+.mr-3 {
+  margin-right: 0.75rem !important;
+}
+
+.mr-1 {
+  margin-right: 0.25rem !important;
 }
 
 .block {
@@ -751,6 +763,14 @@ video {
 
 .max-w-7xl {
   max-width: 80rem !important;
+}
+
+.max-w-96 {
+  max-width: 24rem !important;
+}
+
+.max-w-101 {
+  max-width: 26rem !important;
 }
 
 .origin-top-right {
@@ -832,6 +852,10 @@ video {
      object-fit: cover !important;
 }
 
+.p-2 {
+  padding: 0.5rem !important;
+}
+
 .px-10 {
   padding-left: 2.5rem !important;
   padding-right: 2.5rem !important;
@@ -893,6 +917,14 @@ video {
   padding-right: 1rem !important;
 }
 
+.pr-2 {
+  padding-right: 0.5rem !important;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem !important;
+}
+
 .text-2xl {
   font-size: 1.5rem !important;
   line-height: 2rem !important;
@@ -920,6 +952,10 @@ video {
 .text-white {
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.caret-transparent {
+  caret-color: transparent !important;
 }
 
 .after\:absolute::after {

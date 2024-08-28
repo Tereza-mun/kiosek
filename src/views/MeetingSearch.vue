@@ -86,7 +86,7 @@ const onSubmit = async () => {
               v-model="state.phone"
               type="tel"
               name="phone"
-              class="block w-full rounded-sm px-4 py-2 text-3xl text-blue-dark font-bold mt-4"
+              class="block mx-auto w-full max-w-101 rounded-sm px-4 py-2 text-3xl text-blue-dark font-bold mt-4 caret-transparent"
               :class="v$.phone.$error ? 'border-4 border-red' : 'border-4 border-transparent'"
               @blur="v$.phone.$touch"/>
 
