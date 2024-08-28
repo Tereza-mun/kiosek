@@ -7,6 +7,9 @@ import { useVuelidate } from '@vuelidate/core'
 import * as validators from '@vuelidate/validators'
 import { useFormStore } from '@/stores/formStore';
 import {useI18n} from 'vue-i18n';
+import { useReCaptcha } from 'vue-recaptcha-v3';
+
+const {executeRecaptcha, recaptchaLoaded} = useReCaptcha()!
 import BackIconImage from '@/assets/images/icons/arrow-back.svg'
 
 const backIconImage = BackIconImage;
@@ -36,8 +39,12 @@ const onSubmit = async () => {
   const isFormCorrect = await v$.value.$validate()
   if (!isFormCorrect) return
 
+  await recaptchaLoaded()
+  const recaptcha = await executeRecaptcha('submit')
+
   const data = {
     ...state,
+    recaptcha
   }
 
   await formStore.fetchMeetings(data)

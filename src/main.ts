@@ -4,6 +4,8 @@ import router from './router'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createI18n } from 'vue-i18n'
+import { VueReCaptcha } from 'vue-recaptcha-v3'
+import type { IReCaptchaOptions } from 'vue-recaptcha-v3/dist/IReCaptchaOptions';
 import './style/output.css'
 import cz from './locale/cz.json'
 import en from './locale/en.json'
