@@ -4,13 +4,9 @@ import router from './router'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createI18n } from 'vue-i18n'
-import { VueReCaptcha } from 'vue-recaptcha-v3'
-import type { IReCaptchaOptions } from 'vue-recaptcha-v3/dist/IReCaptchaOptions';
 import './style/output.css'
 import cz from './locale/cz.json'
 import en from './locale/en.json'
-
-
 
 const app = createApp(App)
 
@@ -25,6 +21,11 @@ const i18n = createI18n({
   }
 })
 
+// app.use(VueRecaptchaPlugin, {
+//   v2SiteKey: '6LdZfzAqAAAAAEPRXdfDz0_sRA_A0TevSEzbEmvl',
+//   v3SecretKey: '6LdZfzAqAAAAAPaAGVswsHwxrkAk3Bj12CvoJsFz'
+//   v3SiteKey: '6LdgEzEqAAAAAEYKoeqoEDLaCfwaatPHtf-mYXXI'
+// })
 app.use(createPinia())
 app.use(router)
 app.use(i18n)
