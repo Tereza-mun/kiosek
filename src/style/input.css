@@ -54,12 +54,14 @@
 
         px-4 py-2
 
-        border-gray-500
+        border-gray-400
 
         text-gray-800
         font-bold
 
         hover:cursor-not-allowed
+        hover:opacity-100
+        hover:scale-100
     }
 
     .button--nav{

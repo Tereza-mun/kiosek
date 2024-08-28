@@ -22,18 +22,21 @@ const options = [
   {
     buttonText: 'homepage.buyCar',
     buttonPath: 'home',
+    disabled: true,
     ariaLabel: 'homepage.ariaLabelBuyCar',
     iconImage: buyCarIconImage
   },
   {
     buttonText: 'homepage.sellCar',
     buttonPath: 'home',
+    disabled: true,
     ariaLabel: 'homepage.ariaLabelSellCar',
     iconImage: sellCarIconImage
   },
   {
     buttonText: 'homepage.claim',
     buttonPath: 'home',
+    disabled: true,
     ariaLabel: 'homepage.ariaLabelClaim',
     iconImage: claimIconImage
   },
@@ -64,6 +67,7 @@ const options = [
               :aria="$t(item.ariaLabel)"
               primary
               navigation
+              :class="{'button--disabled': item.disabled}"
               :icon-class="'icon--nav'"
               :icon-image="item.iconImage">
               {{ $t(item.buttonText) }}
