@@ -508,7 +508,7 @@ video {
   padding-bottom: 0.5rem;
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .button--disabled:hover {

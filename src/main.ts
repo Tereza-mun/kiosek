@@ -8,8 +8,6 @@ import './style/output.css'
 import cz from './locale/cz.json'
 import en from './locale/en.json'
 
-
-
 const app = createApp(App)
 
 const i18n = createI18n({
