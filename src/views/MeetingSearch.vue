@@ -6,6 +6,7 @@ import { reactive } from 'vue'
 import { useVuelidate } from '@vuelidate/core'
 import * as validators from '@vuelidate/validators'
 import { useFormStore } from '@/stores/formStore';
+import { storeToRefs } from 'pinia';
 import {useI18n} from 'vue-i18n';
 import BackIconImage from '@/assets/images/icons/arrow-back.svg'
 
@@ -18,19 +19,21 @@ function goBack() {
 }
 
 const state = reactive({
-  phone: '',
+  email: '',
 })
 
 const vRequired = validators.helpers.withMessage(i18n.t('errors.required'), validators.required)
-const vPhone = validators.helpers.withMessage(i18n.t('errors.badFormat'), validators.helpers.regex(/^((\+ ?|00)[0-9]{1,3} ?)?[0-9 -]{9,14}(?:x.+)?$/))
+// const vPhone = validators.helpers.withMessage(i18n.t('errors.badFormat'), validators.helpers.regex(/^((\+ ?|00)[0-9]{1,3} ?)?[0-9 -]{9,14}(?:x.+)?$/))
+const vEmail = validators.helpers.withMessage(i18n.t('errors.badFormat'), validators.email)
 
 const rules = {
-  phone: {vRequired, vPhone},
+  email: {vRequired, vEmail},
 }
 
 const v$ = useVuelidate(rules, state)
 
 const formStore = useFormStore()
+const { meetings } = storeToRefs(formStore)
 
 const onSubmit = async () => {
   const isFormCorrect = await v$.value.$validate()
@@ -42,7 +45,7 @@ const onSubmit = async () => {
 
   await formStore.fetchMeetings(data)
 
-  if (state.phone === formStore.dummyMeeting.phone) {
+  if (state.email === formStore.meetings.email) {
     await router.push({ name: 'meetingDetail' })
   } else {
     await router.push({ name: 'meetingNotFound'})
@@ -65,36 +68,44 @@ const onSubmit = async () => {
       </kiosek-button>
     </div>
       <div class="flex justify-center min-h-101 md:min-h-128">
+<!--        <div-->
+<!--        v-for="meeting in meetings"-->
+<!--        :key="meeting.id">-->
+<!--          <p v-if="meeting.email">{{meeting.email}}</p>-->
+<!--          <p v-if="meeting.username">{{meeting.username}}</p>-->
+<!--          <p v-if="meeting.name">{{meeting.name}}</p>-->
+<!--        </div>-->
         <form
           id="form"
           name="form"
           :aria="$t('search.ariaForm')"
           class="flex flex-col justify-between px-6 md:px-0 py-20 md:py-36 max-w-140"
           autocomplete="on"
+          novalidate
           @submit.prevent="onSubmit"
         >
           <div
             class="block mx-auto">
             <label
               class="text-3xl text-white font-bold"
-              for="phone">
+              for="email">
               {{$t('search.instructions')}}
             </label>
 
             <input
-              id="phone"
-              v-model="state.phone"
-              type="tel"
-              name="phone"
+              id="email"
+              v-model="state.email"
+              type="email"
+              name="email"
               class="block mx-auto w-full max-w-101 rounded-sm px-4 py-2 text-3xl text-blue-dark font-bold mt-4 caret-transparent"
-              :class="v$.phone.$error ? 'border-4 border-red' : 'border-4 border-transparent'"
-              @blur="v$.phone.$touch"/>
+              :class="v$.email.$error ? 'border-4 border-red' : 'border-4 border-transparent'"
+              @blur="v$.email.$touch"/>
 
             <div
-              v-if="v$.phone.$error"
-              class="bg-red block mx-auto max-w-101 py-3 px-4 mt-2 relative after:content-triangle-red after:absolute after:-top-4 after:left-1/5 after:-ml-56">
+              v-if="v$.email.$error"
+              class="bg-red block mx-auto max-w-101 py-3 px-4 mt-2 relative after:content-triangle-red after:absolute after:-top-4 after:left-1/5 after:-ml-44">
               <span
-                v-for="error of v$.phone.$errors"
+                v-for="error of v$.email.$errors"
                 :key="error.$uid"
                 class="text-white font-bold"
                 v-html="error.$message"

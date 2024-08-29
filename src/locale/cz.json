@@ -20,8 +20,8 @@
     "backButtonText": "Zpět",
     "backButtonAria": "klikněte pro přesun o krok zpět",
     "search": {
-        "instructions": "Zadejte, prosím, své telefonní číslo",
-        "ariaForm": "zadejte své telefonní číslo",
+        "instructions": "Zadejte, prosím, svůj email",
+        "ariaForm": "zadejte svůj email",
         "submitButton": "Potvrdit",
         "submitAria": "klikněte pro odeslání formuláře"
     },
@@ -35,8 +35,8 @@
     },
     "meetingNotFound": "Děkujeme za&nbsp;Vaši návštěvu, bohužel se&nbsp;nám nepovedlo nalézt detaily Vaší schůzky, ale&nbsp;víme o&nbsp;Vás a&nbsp;brzy se Vám bude někdo z&nbsp;našich pracovníků věnovat.",
     "errors": {
-        "required": "Bez telefonního čísla se neobejdeme",
-        "badFormat": "Telefonní číslo je ve&nbsp;špatném formátu"
+        "required": "Bez emailu se neobejdeme",
+        "badFormat": "Email je ve&nbsp;špatném formátu"
     },
     "pageNotFound": "Bohužel se něco pokazilo a&nbsp;stránka nebyla nalezena.",
     "backToMainPage": "Zpět na úvodní stránku"

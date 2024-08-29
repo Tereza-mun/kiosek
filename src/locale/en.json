@@ -20,8 +20,8 @@
     "backButtonText": "Back",
     "backButtonAria": "click to return to previous site",
     "search": {
-        "instructions": "Please fill in your phone number",
-        "ariaForm": "please fill in your phone number",
+        "instructions": "Please fill in your email",
+        "ariaForm": "please fill in your email",
         "submitButton": "Submit",
         "submitAria": "click to submit the form"
     },
@@ -35,8 +35,8 @@
     },
     "meetingNotFound": "Thank you for your visit. We unfortunately haven't found the details of your visit but one of our colleagues will assist you shortly.",
     "errors": {
-        "required": "Phone number needs to be filled in",
-        "badFormat": "Phone number is in the wrong format"
+        "required": "Email needs to be filled in",
+        "badFormat": "Email is in the wrong format"
     },
     "pageNotFound": "Ooops, something went wrong and the page has not been found.",
     "backToMainPage": "Back to main page"

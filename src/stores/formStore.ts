@@ -17,11 +17,15 @@ export const useFormStore = defineStore({
   }),
   actions: {
     async fetchMeetings(data?: any) {
-      const submittedNumber = data
+      const submittedEmail = JSON.stringify(data)
+      console.log('submitted data passed in store type of:', typeof submittedEmail)
 
       try {
-        const { data }: any = await axios.get('https://jsonplaceholder.typicode.com/todos');
-        this.meetings = data.filter((response: any) => response.phone === submittedNumber)
+        const { data }: any = await axios.get('https://jsonplaceholder.typicode.com/users');
+        console.log('data from API:', data)
+        const filteredData = data.filter((response: any) => response.email === "Sincere@april.biz")
+        console.log('filtered data:', filteredData)
+        this.meetings = filteredData
 
       } catch (err: any) {
         this.meetings = [];
@@ -38,5 +42,6 @@ interface MeetingsList {
   date: string,
   time: string,
   location: string,
-  person: string
+  person: string,
+  email: string
 }
