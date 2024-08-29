@@ -7,6 +7,8 @@ import { useVuelidate } from '@vuelidate/core'
 import * as validators from '@vuelidate/validators'
 import { useFormStore } from '@/stores/formStore';
 import {useI18n} from 'vue-i18n';
+import { useRecaptchaProvider, Checkbox } from 'vue-recaptcha'
+useRecaptchaProvider()
 import BackIconImage from '@/assets/images/icons/arrow-back.svg'
 
 const backIconImage = BackIconImage;
@@ -101,6 +103,7 @@ const onSubmit = async () => {
               />
             </div>
           </div>
+          <Checkbox />
           <div class="flex justify-center">
             <kiosek-button
               type="submit"
