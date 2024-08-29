@@ -92,7 +92,7 @@ const onSubmit = async () => {
 
             <div
               v-if="v$.phone.$error"
-              class="bg-red py-3 px-4 mt-2 relative after:content-triangle-red after:absolute after:-top-4 after:left-1/5 after:-ml-56">
+              class="bg-red block mx-auto max-w-101 py-3 px-4 mt-2 relative after:content-triangle-red after:absolute after:-top-4 after:left-1/5 after:-ml-56">
               <span
                 v-for="error of v$.phone.$errors"
                 :key="error.$uid"
