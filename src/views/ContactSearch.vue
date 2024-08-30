@@ -44,7 +44,6 @@ const onSubmit = async () => {
 
   const submittedEmail = data.email
 
-  console.log('data from store: ', formStore.meetings)
   const foundMeeting = formStore.meetings.filter((object: any) => object.email === submittedEmail)
 
   if (foundMeeting.length > 0) {
