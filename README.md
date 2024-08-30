@@ -1,8 +1,8 @@
 # kiosek
 
-Pro úspěšné zadání tel.čísla, zadejte 123456789.
+For successfull lookup of the planned meeting, fill in phone number: 123456789
 
-V branchi k emailové validaci zadejte email: Sincere@april.biz pro úspěšné ověření.
+For successfull lookup of contact details, fill in email: Sincere@april.biz
 
 ## Recommended IDE Setup
 
