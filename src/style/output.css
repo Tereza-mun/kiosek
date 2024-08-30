@@ -876,9 +876,9 @@ video {
   padding-bottom: 0.75rem !important;
 }
 
-.py-8 {
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
+.py-4 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .pl-6 {
@@ -891,6 +891,10 @@ video {
 
 .pr-4 {
   padding-right: 1rem !important;
+}
+
+.text-center {
+  text-align: center !important;
 }
 
 .text-2xl {
@@ -926,6 +930,10 @@ video {
   caret-color: transparent !important;
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+
 .after\:absolute::after {
   content: var(--tw-content) !important;
   position: absolute !important;
@@ -951,19 +959,9 @@ video {
   z-index: -10 !important;
 }
 
-.after\:-ml-48::after {
-  content: var(--tw-content) !important;
-  margin-left: -12rem !important;
-}
-
 .after\:-ml-44::after {
   content: var(--tw-content) !important;
   margin-left: -11rem !important;
-}
-
-.after\:-ml-56::after {
-  content: var(--tw-content) !important;
-  margin-left: -14rem !important;
 }
 
 .after\:block::after {
@@ -1030,6 +1028,10 @@ video {
     margin-bottom: 2rem !important;
   }
 
+  .md\:mb-10 {
+    margin-bottom: 2.5rem !important;
+  }
+
   .md\:block {
     display: block !important;
   }
@@ -1062,11 +1064,6 @@ video {
     padding-right: 1.5rem !important;
   }
 
-  .md\:py-14 {
-    padding-top: 3.5rem !important;
-    padding-bottom: 3.5rem !important;
-  }
-
   .md\:py-28 {
     padding-top: 7rem !important;
     padding-bottom: 7rem !important;
@@ -1075,6 +1072,11 @@ video {
   .md\:py-36 {
     padding-top: 9rem !important;
     padding-bottom: 9rem !important;
+  }
+
+  .md\:py-8 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
 
   .md\:pl-36 {

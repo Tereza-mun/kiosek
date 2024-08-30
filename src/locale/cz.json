@@ -26,10 +26,15 @@
         "submitAria": "klikněte pro odeslání formuláře"
     },
     "detail": {
-        "text": "Děkujeme za&nbsp;Vaši návštěvu, níže naleznete detail Vaší plánované schůzky:",
+        "text": "Děkujeme za&nbsp;Vaši návštěvu, níže naleznete své kontaktní údaje:",
         "date": "Datum",
         "time": "Čas",
         "location": "Místnost",
+        "name": "Jméno",
+        "username": "Uživatelské jméno",
+        "street": "Ulice",
+        "city": "Město",
+        "zipcode": "PSČ",
         "pickUp": "Brzy Vás vyzvedne Vaše kontaktní osoba:",
         "person": ""
     },

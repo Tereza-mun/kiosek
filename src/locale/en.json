@@ -26,9 +26,14 @@
         "submitAria": "click to submit the form"
     },
     "detail": {
-        "text": "Please find the details of your appointment below:",
+        "text": "Please find your contact details below:",
         "date": "Date",
         "time": "Time",
+        "name": "Name",
+        "username": "Username",
+        "street": "Street",
+        "city": "City",
+        "zipcode": "Zip code",
         "location": "Location",
         "pickUp": "Your contact person will come pick you up shortly:",
         "person": ""
