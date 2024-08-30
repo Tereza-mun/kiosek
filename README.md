@@ -2,6 +2,8 @@
 
 Pro úspěšné zadání tel.čísla, zadejte 123456789.
 
+V branchi k emailové validaci zadejte email: Sincere@april.biz pro úspěšné ověření.
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
