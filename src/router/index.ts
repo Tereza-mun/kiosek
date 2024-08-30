@@ -15,14 +15,29 @@ const router = createRouter({
       component: () => import('../views/MeetingSearch.vue')
     },
     {
+      path: '/zadani-kontaktu',
+      name: 'contactSearch',
+      component: () => import('../views/ContactSearch.vue')
+    },
+    {
       path: '/detail-schuzky',
       name: 'meetingDetail',
       component: () => import('../views/MeetingDetail.vue')
     },
     {
+      path: '/kontaktni-udaje',
+      name: 'contactDetail',
+      component: () => import('../views/ContactDetail.vue')
+    },
+    {
       path: '/schuzka-nenalezena',
       name: 'meetingNotFound',
       component: () => import('../views/MeetingNotFound.vue')
+    },
+    {
+      path: '/kontakt-nenalezen',
+      name: 'contactNotFound',
+      component: () => import('../views/ContactNotFound.vue')
     },
   ]
 })

@@ -4,6 +4,8 @@
         "headline": "Jak Vám dnes můžeme pomoci?",
         "meeting": "Mám schůzku",
         "ariaLabelMeeting": "klikněte zde pokud s námi máte domluvenou schůzku",
+        "contact": "Kontaktní osoba",
+        "ariaLabelContact": "klikněte zde pro zobrazení kontaktních údajů vaší kontaktní osoby",
         "buyCar": "Chci koupit vůz",
         "ariaLabelBuyCar": "klikněte zde pokud chcete koupit vůz",
         "sellCar": "Prodám svůj vůz",
@@ -21,22 +23,33 @@
     "backButtonAria": "klikněte pro přesun o krok zpět",
     "search": {
         "instructions": "Zadejte, prosím, své telefonní číslo",
+        "instructionsEmail": "Zadejte email Vaší kontaktní osoby",
         "ariaForm": "zadejte své telefonní číslo",
+        "ariaFormEmail": "zadejte svůj email",
         "submitButton": "Potvrdit",
         "submitAria": "klikněte pro odeslání formuláře"
     },
     "detail": {
         "text": "Děkujeme za&nbsp;Vaši návštěvu, níže naleznete detail Vaší plánované schůzky:",
+        "textContact": "Děkujeme za&nbsp;Vaši návštěvu, níže naleznete kontakt na Vaši kontaktní osobu:",
         "date": "Datum",
         "time": "Čas",
         "location": "Místnost",
+        "name": "Jméno",
+        "phone": "Telefon",
+        "street": "Ulice",
+        "city": "Město",
+        "zipcode": "PSČ",
         "pickUp": "Brzy Vás vyzvedne Vaše kontaktní osoba:",
         "person": ""
     },
     "meetingNotFound": "Děkujeme za&nbsp;Vaši návštěvu, bohužel se&nbsp;nám nepovedlo nalézt detaily Vaší schůzky, ale&nbsp;víme o&nbsp;Vás a&nbsp;brzy se Vám bude někdo z&nbsp;našich pracovníků věnovat.",
+    "contactNotFound": "Bohužel se&nbsp;nám nepovedlo nalézt kontaktní osobu. Překontrolujte si, prosím zadaný email:",
     "errors": {
         "required": "Bez telefonního čísla se neobejdeme",
-        "badFormat": "Telefonní číslo je ve&nbsp;špatném formátu"
+        "requiredEmail": "Bez emailu se neobejdeme",
+        "badFormat": "Telefonní číslo je ve&nbsp;špatném formátu",
+        "badFormatEmail": "Email je ve&nbsp;špatném formátu"
     },
     "pageNotFound": "Bohužel se něco pokazilo a&nbsp;stránka nebyla nalezena.",
     "backToMainPage": "Zpět na úvodní stránku"

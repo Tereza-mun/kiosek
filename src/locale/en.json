@@ -4,6 +4,8 @@
         "headline": "How can we help you today?",
         "meeting": "I have an appointment",
         "ariaLabelMeeting": "click here if you have an appointment arranged",
+        "contact": "Contact person",
+        "ariaLabelContact": "click here to find your contact persons contact details",
         "buyCar": "I want to buy a car",
         "ariaLabelBuyCar": "click here if you would like to buy a car",
         "sellCar": "I am selling my car",
@@ -21,22 +23,33 @@
     "backButtonAria": "click to return to previous site",
     "search": {
         "instructions": "Please fill in your phone number",
+        "instructionsEmail": "Your contact person's email",
         "ariaForm": "please fill in your phone number",
+        "ariaFormEmail": "please fill in your email",
         "submitButton": "Submit",
         "submitAria": "click to submit the form"
     },
     "detail": {
         "text": "Please find the details of your appointment below:",
+        "textContact": "Please find the contact details of your contact person below:",
         "date": "Date",
         "time": "Time",
         "location": "Location",
+        "name": "Name",
+        "phone": "Phone",
+        "street": "Street",
+        "city": "City",
+        "zipcode": "Zip code",
         "pickUp": "Your contact person will come pick you up shortly:",
         "person": ""
     },
     "meetingNotFound": "Thank you for your visit. We unfortunately haven't found the details of your visit but one of our colleagues will assist you shortly.",
+    "contactNotFound": "Thank you for your visit. We unfortunately haven't found the details of your contact person.",
     "errors": {
         "required": "Phone number needs to be filled in",
-        "badFormat": "Phone number is in the wrong format"
+        "requiredEmail": "Email needs to be filled in",
+        "badFormat": "Phone number is in the wrong format",
+        "badFormatEmail": "Email is in the wrong format"
     },
     "pageNotFound": "Ooops, something went wrong and the page has not been found.",
     "backToMainPage": "Back to main page"

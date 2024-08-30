@@ -3,11 +3,13 @@ import KiosekButton from '@/components/atoms/KiosekButton.vue'
 import KiosekContainer from '@/components/other/KiosekContainer.vue'
 
 import MeetingIconImage from "@/assets/images/icons/meeting.svg";
+import ContactIconImage from "@/assets/images/icons/contact.svg";
 import BuyIconImage from "@/assets/images/icons/buy-car.svg";
 import SellIconImage from "@/assets/images/icons/sell-car.svg";
 import ClaimIconImage from "@/assets/images/icons/claim.svg";
 
 const meetingIconImage = MeetingIconImage;
+const contactIconImage = ContactIconImage;
 const buyCarIconImage = BuyIconImage;
 const sellCarIconImage = SellIconImage;
 const claimIconImage = ClaimIconImage;
@@ -18,6 +20,12 @@ const options = [
     buttonPath: 'meetingSearch',
     ariaLabel: 'homepage.ariaLabelMeeting',
     iconImage: meetingIconImage
+  },
+  {
+    buttonText: 'homepage.contact',
+    buttonPath: 'contactSearch',
+    ariaLabel: 'homepage.ariaLabelContact',
+    iconImage: contactIconImage
   },
   {
     buttonText: 'homepage.buyCar',

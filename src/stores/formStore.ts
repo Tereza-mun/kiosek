@@ -13,15 +13,17 @@ export const useFormStore = defineStore({
         person: 'John Doe'
       },
     error: null as null | string,
-    meetings: [] as MeetingsList[]
+    meetings: [] as MeetingsList[],
+    submittedEmail: null as null | string,
   }),
   actions: {
     async fetchMeetings(data?: any) {
-      const submittedNumber = data
+      const submittedEmail = data.email
 
       try {
-        const { data }: any = await axios.get('https://jsonplaceholder.typicode.com/todos');
-        this.meetings = data.filter((response: any) => response.phone === submittedNumber)
+        const { data }: any = await axios.get('https://jsonplaceholder.typicode.com/users');
+        this.meetings = data.filter((response: any) => response.email === submittedEmail)
+        this.submittedEmail = submittedEmail
 
       } catch (err: any) {
         this.meetings = [];
@@ -33,10 +35,13 @@ export const useFormStore = defineStore({
 })
 
 interface MeetingsList {
-  id: number,
-  phone: string,
-  date: string,
-  time: string,
-  location: string,
-  person: string
+  id: number
+  email: string
+  name: string
+  phone: string
+  address: {
+    street: string,
+    city: string,
+    zipcode: string
+  }
 }
