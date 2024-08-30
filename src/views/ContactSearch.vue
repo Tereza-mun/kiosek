@@ -89,7 +89,7 @@ const onSubmit = async () => {
             <input
               id="email"
               v-model="state.email"
-              type="tel"
+              type="email"
               name="email"
               class="block mx-auto w-full max-w-101 rounded-sm px-4 py-2 text-3xl text-blue-dark font-bold mt-4 caret-transparent"
               :class="v$.email.$error ? 'border-4 border-red' : 'border-4 border-transparent'"
