@@ -4,14 +4,6 @@ import axios from 'axios'
 export const useFormStore = defineStore({
   id: 'form',
   state: () => ({
-    dummyMeeting: {
-      id: 1,
-      phone: '123456789',
-      date: '2024-08-14',
-      time: '15:00',
-      location: 'Room 101',
-      person: 'John Doe'
-    },
     error: null as null | string,
     meetings: [] as MeetingsList[]
   }),
