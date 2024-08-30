@@ -6,7 +6,6 @@ import { reactive } from 'vue'
 import { useVuelidate } from '@vuelidate/core'
 import * as validators from '@vuelidate/validators'
 import { useFormStore } from '@/stores/formStore';
-import { storeToRefs } from 'pinia';
 import {useI18n} from 'vue-i18n';
 import BackIconImage from '@/assets/images/icons/arrow-back.svg'
 
@@ -23,7 +22,6 @@ const state = reactive({
 })
 
 const vRequired = validators.helpers.withMessage(i18n.t('errors.required'), validators.required)
-// const vPhone = validators.helpers.withMessage(i18n.t('errors.badFormat'), validators.helpers.regex(/^((\+ ?|00)[0-9]{1,3} ?)?[0-9 -]{9,14}(?:x.+)?$/))
 const vEmail = validators.helpers.withMessage(i18n.t('errors.badFormat'), validators.email)
 
 const rules = {
@@ -33,7 +31,6 @@ const rules = {
 const v$ = useVuelidate(rules, state)
 
 const formStore = useFormStore()
-const { meetings } = storeToRefs(formStore)
 
 const onSubmit = async () => {
   const isFormCorrect = await v$.value.$validate()
@@ -45,7 +42,11 @@ const onSubmit = async () => {
 
   await formStore.fetchMeetings(data)
 
-  if (state.email === formStore.meetings.email) {
+  const submittedEmail = data.email
+
+  const foundMeeting = formStore.meetings.filter((object: any) => object.email === submittedEmail)
+
+  if (foundMeeting.length > 0) {
     await router.push({ name: 'meetingDetail' })
   } else {
     await router.push({ name: 'meetingNotFound'})
@@ -68,13 +69,6 @@ const onSubmit = async () => {
       </kiosek-button>
     </div>
       <div class="flex justify-center min-h-101 md:min-h-128">
-<!--        <div-->
-<!--        v-for="meeting in meetings"-->
-<!--        :key="meeting.id">-->
-<!--          <p v-if="meeting.email">{{meeting.email}}</p>-->
-<!--          <p v-if="meeting.username">{{meeting.username}}</p>-->
-<!--          <p v-if="meeting.name">{{meeting.name}}</p>-->
-<!--        </div>-->
         <form
           id="form"
           name="form"

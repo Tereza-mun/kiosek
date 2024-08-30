@@ -20,8 +20,6 @@ const { meetings } = storeToRefs(formStore)
 const { fetchMeetings } = formStore
 
 fetchMeetings()
-
-console.log(meetings)
 </script>
 
 <template>
@@ -39,20 +37,40 @@ console.log(meetings)
       </kiosek-button>
     </div>
     <div class="flex justify-center min-h-101 md:min-h-128">
-      <div class="px-6 md:px-0 py-8 md:py-14 max-w-160">
+      <div class="px-6 md:px-0 py-4 md:py-8 max-w-160">
         <h1
           class="text-2xl md:text-3xl text-white font-bold mb-4 md:mb-8"
           v-html="$t('detail.text')" />
-        <ul class="mb-8 md:mb-16">
-          <li class="list-none text-xl md:text-2xl text-white">
-            {{ $t('detail.date') }}: {{ formStore.dummyMeeting.date }}
+        <ul
+          class="mb-4 md:mb-10"
+          v-for="meeting in meetings"
+          :key="meeting.id">
+          <li
+            v-if="meeting.name"
+            class="list-none text-xl md:text-2xl text-white">
+            <strong>{{ $t('detail.name') }}:</strong> &nbsp;&nbsp; {{meeting.name}}
           </li>
-          <li class="list-none text-xl md:text-2xl text-white">
-            {{ $t('detail.time') }}: {{ formStore.dummyMeeting.time }}
+          <li
+            v-if="meeting.username"
+            class="list-none text-xl md:text-2xl text-white">
+            <strong>{{ $t('detail.username') }}:</strong> &nbsp;&nbsp; {{meeting.username}}
           </li>
-          <li class="list-none text-xl md:text-2xl text-white">
-            {{ $t('detail.location') }}: {{ formStore.dummyMeeting.location }}
+          <li
+            v-if="meeting.address.street"
+            class="list-none text-xl md:text-2xl text-white">
+            <strong>{{ $t('detail.street') }}:</strong> &nbsp;&nbsp; {{meeting.address.street}}
           </li>
+          <li
+            v-if="meeting.address.city"
+            class="list-none text-xl md:text-2xl text-white">
+            <strong>{{ $t('detail.city') }}:</strong> &nbsp;&nbsp; {{meeting.address.city}}
+          </li>
+          <li
+            v-if="meeting.address.zipcode"
+            class="list-none text-xl md:text-2xl text-white">
+            <strong>{{ $t('detail.zipcode') }}:</strong> &nbsp;&nbsp; {{meeting.address.zipcode}}
+          </li>
+
         </ul>
         <h2 class="text-2xl md:text-3xl text-white font-bold mb-4 md:mb-6">{{ $t('detail.pickUp') }}</h2>
         <div class="flex">
