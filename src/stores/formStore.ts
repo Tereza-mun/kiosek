@@ -18,6 +18,7 @@ export const useFormStore = defineStore({
   }),
   actions: {
     async fetchMeetings(data?: any) {
+      if (data?.email === undefined) return
       const submittedEmail = data.email
 
       try {
